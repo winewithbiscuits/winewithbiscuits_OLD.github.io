@@ -8,7 +8,7 @@
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <link rel="icon" href="/images/favicon.png" />
+        <link rel="icon" href="/images/favicon.ico" />
         <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
 <link rel="stylesheet" href="/css/fonts.min.css" />
@@ -20,10 +20,15 @@
 <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
 <link
     rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/Androidstudio.min.css"
 />
 <script src="/js/lib/highlight.js"></script>
 
+
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" />
+<script src="/js/lib/math.js"></script>
 
 
 <script src="/js/lib/preview.js"></script>
@@ -41,7 +46,7 @@
                 <div id="loading" v-show="loading">
                     <div id="loading-circle">
                         <h2>LOADING</h2>
-                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <p>If the loading is too slow, please enable the cache, which is enabled by default in the browser</p>
                         <img src="/images/loading.gif" />
                     </div>
                 </div>
@@ -57,14 +62,9 @@
             <span>&ensp;Home</span>
         </a>
         
-        <a href="/about">
+        <a href="/About">
             <i class="fa-solid fa-id-card fa-fw"></i>
             <span>&ensp;About</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
         </a>
         
         <a href="/categories">
@@ -75,6 +75,11 @@
         <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/archive">
+            <i class="fa-solid fa-archive fa-fw"></i>
+            <span>&ensp;Archive</span>
         </a>
         
     </div>
@@ -95,21 +100,12 @@
                     </div>
                 </a>
                 
-                <a href="/about">
+                <a href="/About">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
                         </div>
                         <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
-                    </div>
-                </a>
-                
-                <a href="/archives">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-box-archive fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
                     </div>
                 </a>
                 
@@ -131,6 +127,15 @@
                     </div>
                 </a>
                 
+                <a href="/archive">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archive</div>
+                    </div>
+                </a>
+                
             </div>
         </transition>
     </div>
@@ -145,6 +150,60 @@
 <div id="archives">
     
     <div id="timeline-wrap" ref="timeline">
+        
+        <div class="timeline" data-title="upload">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/6/12</div>
+                <a href="/2023/06/12/Upload/">
+                    <h3>Upload</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/Uncategorised/" style="color: #00a596">Uncategorised</a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="solanin">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/6/12</div>
+                <a href="/2023/06/12/Solanin/">
+                    <h3>Solanin</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="research">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2023/6/12</div>
+                <a href="/2023/06/12/research/">
+                    <h3>research</h3>
+                </a>
+                <div class="info">
+                    
+                    
+                </div>
+            </div>
+        </div>
         
         <div class="timeline" data-title="helloworld">
             <div class="timeline-tail"></div>
@@ -167,7 +226,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2023 Nyaruhodo
+            2023 - 2023 Nyaruhodo
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
@@ -176,6 +235,13 @@
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
             <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            
+            
         </div>
         
     </div>
@@ -192,6 +258,13 @@
             
         </div>
         <script src="/js/main.js"></script>
+        <script>
+            console.info("Welcome to Argvchs' blog!");
+            if (!window.hasOwnProperty("ontouchstart")) {
+                let html = '<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';
+                document.body.append(document.createRange().createContextualFragment(html));
+            }
+        </script>
         
     </body>
 </html>
