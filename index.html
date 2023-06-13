@@ -59,6 +59,11 @@
             <span>NYARUHODO</span>
         </a>
         
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
         <a href="/About">
             <i class="fa-solid fa-id-card fa-fw"></i>
             <span>&ensp;About</span>
@@ -87,6 +92,15 @@
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
                 
                 <a href="/About">
                     <div class="item">
@@ -288,7 +302,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Uncategorised/" style="color: #ff7d73">Uncategorised</a>
+            <a href="/tags/Uncategorised/" style="color: #00a596">Uncategorised</a>
         </span>
         
     </div>
