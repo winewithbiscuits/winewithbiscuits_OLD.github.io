@@ -38,6 +38,10 @@
 
 
 
+<script src="https://cdn.staticfile.org/waline/2.14.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline.min.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.8/waline-meta.min.css" />
+
 
 
 
@@ -168,13 +172,17 @@
 <p>reach me @ <a target="_blank" rel="noopener" href="https://github.com/winewithbiscuits">Github</a></p>
 <p>Currently focusing on learning some of the tools and techniques used to resolve biological structures at atomic resolutions.</p>
 <p>In my free time, I watch youtube most of the time, and sometimes I read manga&#x2F;light novels depending on my mood.<br>Playing truck sim 2 before bed has become like a ritual for me.</p>
-<p>Should have been born as a cat&#x2F;ᐠ_ ꞈ _ᐟ\ɴʏᴀ~</p>
+<p>&#x2F;ᐠ_ ꞈ _ᐟ\ɴʏᴀ~</p>
 
     </div>
     
     
     
     
+    
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
     
     
     
@@ -217,6 +225,23 @@
         
         
     
+    
+    <script>
+        Waline.init({
+            el: "#waline-container",
+            serverURL: "https://site-comments-lilac.vercel.app/",
+            commentCount: true,
+            pageview: false,
+            emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+            meta: "nick,mail,link".split(","),
+            requiredMeta: "nick".split(","),
+            lang: "en-US, jp-JP, zh-CN",
+            wordLimit: 0,
+            pageSize: "10",
+            login: "disable",
+            
+        });
+    </script>
     
     
         
